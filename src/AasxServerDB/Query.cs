@@ -601,7 +601,7 @@ namespace AasxServerDB
                         value = sme.value,
                         idShortPath = path,
                         url = $"{ExternalBlazor}/submodels/{Base64UrlEncoder.Encode(identifier)}/submodel-elements/{path}",
-                        timeStamp = TimeStamp.TimeStamp.DateTimeToString(sme.sme.TimeStamp)
+                        timeStamp = TimeStamp.TimeStamp.DateTimeToString(sme.sme.TimeStampTree)
                     };
                 }
             );
