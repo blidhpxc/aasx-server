@@ -335,13 +335,10 @@ namespace AasxServerDB
             var needSmIdShort = false;
             var needSmDisplayName = false;
             var needSmDescription = false;
-            var needSmId = false;
             var needSmeSemanticId = false;
             var needSmeIdShort = false;
             var needSmeDisplayName = false;
             var needSmeDescription = false;
-            var needSmeValue = false;
-            var needSmeValueType = false; // <-- is unclear
 
             // get data
             var combiCondition = string.Empty; // this saves the combinedCondition but in a way that raw sql can work with it
@@ -483,13 +480,10 @@ namespace AasxServerDB
                 needSmIdShort      = combinedCondition.Contains("sm.idShort");
                 needSmDisplayName  = combinedCondition.Contains("sm.displayName");
                 needSmDescription  = combinedCondition.Contains("sm.description");
-                needSmId           = combinedCondition.Contains("sm.id");
                 needSmeSemanticId  = combinedCondition.Contains("sme.semanticId");
                 needSmeIdShort     = combinedCondition.Contains("sme.idShort");
                 needSmeDisplayName = combinedCondition.Contains("sme.displayName");
                 needSmeDescription = combinedCondition.Contains("sme.description");
-                needSmeValue       = combinedCondition.Contains("sme.value");
-                needSmeValueType   = combinedCondition.Contains("sme.valueType");
 
                 // convert to sql
                 combiCondition = ConvertToSqlString(combinedCondition);
